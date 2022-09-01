@@ -26,7 +26,6 @@ import { ViewRejectedComponent } from './view-rejected/view-rejected.component';
 import { LogoutComponent } from './logout/logout.component';
 import { LoanappsuccessComponent } from './loanappsuccess/loanappsuccess.component';
 import { CheckLoanStatusComponent } from './check-loan-status/check-loan-status.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { EmiCalculatorComponent } from './emi-calculator/emi-calculator.component';
 
@@ -53,7 +52,6 @@ import { EmiCalculatorComponent } from './emi-calculator/emi-calculator.componen
     LogoutComponent,
     LoanappsuccessComponent,
     CheckLoanStatusComponent,
-    DashboardComponent,
     AboutUsComponent,
     EmiCalculatorComponent,
   ],
