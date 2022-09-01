@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="emi">
+        <div class="emiMain">
+            <div class="image">
+                <div style="margin-top: 40px; color: #453C73;">
+                    <h1>Vehicle Loan EMI calculator</h1>
+                </div>
+            </div>
+            <div class="div2">
+                <p class="emi-desc">Vehicle Loan EMI Calculator helps you calculate the EMI you need to pay per month. It will also calculate the total interest to be paid for your loan tenure, and the total payable amount for the loan. It will make it easier for you to understand your loan.</p>
+            </div>
+            <div class="div3">
+                <div class="div3_1">
+                    <div class="div3_1_1">
+                        <label style="font-weight:500 ">Loan Amount: </label>
+                        <button>₹</button>
+                        <input value={{amount}}>
+                        <br>
+                        <label>1L</label>
+                        <input class="slider" type="range" min="100000" max="4000000" value="300000" (input)="valueChanged1($event.target.value)">
+                        <label>40L</label>
+                        <br>
+                    </div>
+                    <div class="div3_1_1">
+                        <label style="font-weight:500 ">Tenure: </label>
+                        <input value={{tenure}}>
+                        <button>Years</button>
+                        <br>
+                        <label>1</label>
+                        <input class="slider" type="range" min="1" max="10" value="2" (input)="valueChanged2($event.target.value)">
+                        <label>10</label>
+                        <br>
+                    </div>
+                    <div class="div3_1_1">
+                        <label style="font-weight:500 ">Interest: </label>
+                        <input value={{interest}}>
+                        <button>%</button>
+                        <br>
+                        <label>8</label>
+                        <input class="slider" type="range" min="8" max="20" value="9" (input)="valueChanged3($event.target.value)">
+                        <label>20</label>
+                        <br>
+                    </div>
+                    <button class="calc btn calculate" (click)="calculate()">Calculate</button>
+                </div>
+                <div class="div3_2">
+                    <div class="div3_2_1">
+                        <p>EMI Result</p>
+                    </div>
+                    <div class="div3_2_2">
+                        <p> Equated Monthly Installment (EMI) </p>
+                        <p style="font-size :1.5rem">{{emi}}</p>
+                        <p> Total Interest Payable </p>
+                        <p style="font-size :1.5rem">{{totalinterest}}</p>
+                        <p> Total Payment (Principal+Interest) </p>
+                        <p style="margin-bottom: 2rem;font-size :1.5rem;"> {{total}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <br>
+    <p>© Vehicle Loan 2022. All Rights Reserved. <br>
+        <a>Project Gladiator (Larsen & Toubro Infotech Limited)</a>
+    </p>
+    <br>
+</footer>

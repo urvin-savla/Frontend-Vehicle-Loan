@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <h1 class = "text" style = "font-size: 25px;">Application Form</h1>
+        <hr style = "width:70%">
+        <p class = "text" style = "color: grey; font-size: 12px;">Enter Your Vehicle Details<p> <br>
+            <form (ngSubmit)="registerVehicle()" ngNativeValidate>           
+                <input type="text" name="VehicleId" placeholder="Vehicle Registration Number"  [(ngModel)]="VehicleId" required/><br>
+                <input type="text" name="VehicleName" placeholder="Vehicle Name"  [(ngModel)]= "VehicleName" required/><br>
+                <input type="text" name="VehicleModel" placeholder="Vehicle Model"  [(ngModel)]= "VehicleModel" required/><br>
+                <select type="text" name="VehicleType"  class="typeclass"  [(ngModel)]= "VehicleType" required>
+                    <option selected disabled hidden value='undefined'> Select Vehicle Type: </option>
+                    <option value="Two-Wheeler">Two Wheeler</option>
+                    <option value="Three-Wheeler">Three Wheeler</option>
+                    <option value="Four-Wheeler">Four Wheeler</option>
+                </select><br>
+                <input type="number" name="VehicleYear" placeholder="Vehicle Year"  [(ngModel)]= "VehicleYear" required/><br>
+                <input type="text" name="VehicleColour" placeholder="Vehicle Colour"  [(ngModel)] = "VehicleColour"/><br>
+                <input type="number" name="ExShowroomPrice" placeholder="Ex-Showroom Price"  [(ngModel)]="ExShowroomPrice" required/><br>
+                <input type="number" name="OnRoadPrice" placeholder="OnRoadPrice"  [(ngModel)]= "OnRoadPrice" required/><br>
+                <button class="btn register">Register Vehicle</button><br><br>
+        </form>
+    </div>
+</div>

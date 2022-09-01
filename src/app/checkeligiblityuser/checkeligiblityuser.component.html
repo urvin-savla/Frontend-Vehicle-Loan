@@ -1,0 +1,49 @@
+<div class = "container">
+    <a routerLink = '{{route}}' class = "btn" style = "font-size: 13px; text-align: right; width: 80%;">Apply for Loan</a>
+    <h1 class = "text" style = "font-size: 30px; text-align: center; font-weight: 600;">Check Loan Eligibility</h1>
+    <hr style="width: 50%;">
+    <p class = "text" style = "color: grey; font-size: 12px; text-align: center;">Enter your details to check your eligibility for the loan.<p><br> 
+    <form (ngSubmit)=checkeligiblity() ngNativeValidate>
+        <div class = "row">
+        <p class="text" style = "color: #574b90; font-weight:600; letter-spacing: 1px;"> Enter Vehical Details </p>
+        <input type = "number" style = "width: 43%;" name="onroadprice" placeholder="On-Road Price" [(ngModel)]="onroadprice" required/> 
+        <select type="number"><br>
+            <option selected disabled hidden style='display: none' value='undefined'>Loan Type</option>
+            <option>Two-Wheeler</option>
+            <option>Three-Wheeler</option>
+            <option>Four-Wheeler</option>
+        </select>
+        <br> <br>     
+        <hr style = "height: 2px; border: 0; background-color: rgb(214, 214, 214);"><br>
+        <p class="text" style = "color: #574b90; font-weight:600; letter-spacing: 1px;"> Enter Applicant Details </p>
+        <input type = "text" style = "width: 43%;" placeholder = "Name"/>
+        <input type = "number" style = "width: 43%; float:right;" name="monthlysavings" placeholder = "Monthly Savings (Ex:- 10000)" [(ngModel)]="monthlysavings" required/>
+        <input type = "number" style = "width: 43%;" name="existingemi" placeholder = "Existing EMI" [(ngModel)]="existingemi" required/> 
+        <select type="number" name="loantenure"  class="loantenure" [(ngModel)]="loantenure" required><br>
+            <option selected disabled hidden style='display: none' value='undefined'>Select the Loan Tenure: </option>
+            <option value=6>6</option>
+            <option value=12>12</option>
+            <option value=24>24</option>
+            <option value=36>36</option>
+            <option value=48>48</option>
+            <option value=60>60</option>
+            <option value=72>72</option>
+            <option value=84>84</option>
+        </select><br><br>
+        <hr style = "height: 2px; border: 0; background-color: rgb(214, 214, 214);">
+        <br>
+
+        <p class="text" style = "color: #574b90; font-weight:600; letter-spacing: 1px;"> Enter Contact Details </p>
+
+        <input type = "text" style = "width: 43%;" placeholder = "Mobile Number"/>
+        <input type = "text" style = "width: 43%; float:right;" placeholder = "Email"/> <br> <br> <br>
+    
+        </div>
+    <button type="submit" class='btn login'>Check Eligiblity</button><br><br>
+    <p class = "text" style = "color: rgb(68, 68, 68); font-size: 15px; font-weight:600; text-align: center; letter-spacing: 2px;"> {{stat}} </p> <br>   
+    </form>
+</div>
+
+
+
+

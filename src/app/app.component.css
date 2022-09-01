@@ -1,0 +1,33 @@
+.navpanel{
+        overflow: hidden;
+        background-color: #574b90;
+        width: 100%;
+        margin-left: auto;
+        height: 70px;
+}
+
+.navpanel .navbar-link{
+    float: right;
+    color: white;
+    display: block;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    padding: 26px 26px;
+    text-decoration: none;
+}
+
+.navpanel .navbar-link:hover{
+    background-color: #453C73;
+    
+  }
+
+.navbar-app-title{
+    font-size: 25px;
+    float: left;
+    color: white;
+    display: block;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    padding: 4px 4px;
+    text-decoration: none;
+}
